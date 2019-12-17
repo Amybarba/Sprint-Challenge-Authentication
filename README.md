@@ -16,10 +16,10 @@ The Minimum Viable Product must be completed in three hours.
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your _Team Lead_ as collaborator on Github.
-- [ ] Clone your forked version of the Repository.
-- [ ] Create a new Branch on the clone: git checkout -b `firstName-lastName`.
+- [X] Create a forked copy of this project.
+- [X] Add your _Team Lead_ as collaborator on Github.
+- [X] Clone your forked version of the Repository.
+- [X] Create a new Branch on the clone: git checkout -b `firstName-lastName`.
 - [ ] Implement the project on this Branch, committing changes regularly.
 - [ ] Push commits: git push origin `firstName-lastName`.
 
@@ -38,13 +38,27 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] What is the purpose of using _sessions_?
+- [X] What is the purpose of using _sessions_?
 
-- [ ] What does bcrypt do to help us store passwords in a secure manner.
+Sessions are used to store information about the end user, so that repetitive "proving" of credentials does not need to occur.
 
-- [ ] What does bcrypt do to slow down attackers?
+- [X] What does bcrypt do to help us store passwords in a secure manner.
 
-- [ ] What are the three parts of the JSON Web Token?
+It creates a random string around the password that basically keeps it safe. 
+By using "hashing" a process/algorithm that takes a password and turns into mumbo jumbo so that it is harder to guess
+
+- [X] What does bcrypt do to slow down attackers?
+
+Bcrypt uses salting in order to make it harder for a hacker to try and guess a password, it makes the program run 12th to the 12th power for example in cycles so
+that it would discourage a hacker from using a program to try and extract a password.
+
+- [X] What are the three parts of the JSON Web Token?
+
+The Header = algorithm with the type of token
+The Payload = payload includes claims(permissions) i.e. like user id, can be customized with properties
+The Signature = a string by base 64encoding using header and payload joined together, then signed with a secret
+
+All separated by a period.
 
 ## Minimum Viable Product
 
